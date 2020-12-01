@@ -34,8 +34,8 @@ func Part1() {
 
 func fixExpenseReport(expenses []int) int {
 	correctExpense := 0
-	for _, expense := range expenses {
-		for _, anotherExpense := range expenses {
+	for expensePointer, expense := range expenses {
+		for _, anotherExpense := range expenses[expensePointer+1:] {
 			if expense+anotherExpense == 2020 {
 				correctExpense = expense * anotherExpense
 				break
@@ -63,9 +63,9 @@ func Part2() {
 
 func fixExpenseReportPart2(expenses []int) int {
 	correctExpense := 0
-	for _, expense := range expenses {
-		for _, anotherExpense := range expenses {
-			for _, thirdExpense := range expenses {
+	for expensePointer, expense := range expenses {
+		for secondExpensePointer, anotherExpense := range expenses[expensePointer+1:] {
+			for _, thirdExpense := range expenses[secondExpensePointer+1:] {
 				if expense+anotherExpense+thirdExpense == 2020 {
 					correctExpense = expense * anotherExpense * thirdExpense
 					break
