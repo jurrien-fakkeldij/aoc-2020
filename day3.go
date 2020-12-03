@@ -44,7 +44,6 @@ func countHitTrees(groundMap []string, direction Vector) int {
 	pointer := 0
 	for index, line := range groundMap {
 		runeLine := []rune(line)
-		//fmt.Println("pointer:", pointer, "line:", line, "character:", string(line[pointer]))
 		if index == 0 {
 			//noop
 		} else if direction.y != 1 && index%direction.y == 1 {
@@ -56,9 +55,7 @@ func countHitTrees(groundMap []string, direction Vector) int {
 		}
 		pointer += direction.x
 		if pointer >= len(runeLine) {
-			//fmt.Println("returning pointer:", pointer, "length:", len(runeLine))
 			pointer = pointer % len(runeLine)
-			//fmt.Println("new pointer:", pointer)
 		}
 	}
 
