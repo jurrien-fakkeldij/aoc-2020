@@ -65,7 +65,7 @@ func findHighestSeatID(boardingPasses []string) int {
 }
 
 func findSeatID(boardingPass string) int {
-	row, error := findRowBin(boardingPass[0:7])
+	row, error := findRow(boardingPass[0:7])
 
 	if error != nil {
 		fmt.Println("Error finding row: ", error)
@@ -85,7 +85,7 @@ func findSeatID(boardingPass string) int {
 	return seatID
 }
 
-func findRowBin(rowIdentifier string) (int, error) {
+func findRow(rowIdentifier string) (int, error) {
 	binRowIdentifier := strings.ReplaceAll(strings.ReplaceAll(rowIdentifier, "B", "1"), "F", "0")
 	column, error := strconv.ParseInt(binRowIdentifier, 2, 8)
 	return int(column), error
