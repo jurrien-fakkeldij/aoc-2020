@@ -31,7 +31,7 @@ func Day6() {
 	fmt.Println("============== OUTPUT ============")
 	actualDeclarationForm := filereader.ReadFile("./input/day-6/input.txt")
 	count = countYesAnswers(actualDeclarationForm)
-	fmt.Println("Counted Answers for All groups:", count)
+	fmt.Println("Counted unqiue answers within all groups:", count)
 
 	count = countYesAnwersByEverone(actualDeclarationForm)
 	fmt.Println("Counted only the yes for the entire group:", count)
