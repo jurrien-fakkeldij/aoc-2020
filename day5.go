@@ -49,7 +49,6 @@ func findAllSeatIDs(boardingPasses []string) []int {
 	for index, boardingPass := range boardingPasses {
 		seatIDS[index] = findSeatID(boardingPass)
 	}
-
 	return seatIDS
 }
 
@@ -80,7 +79,6 @@ func findSeatID(boardingPass string) int {
 	}
 
 	seatID := (row * 8) + column
-	//fmt.Println("BoardingPass:", boardingPass, "row:", row, "column", column, "seatID:", seatID)
 
 	return seatID
 }
