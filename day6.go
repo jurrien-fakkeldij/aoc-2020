@@ -11,7 +11,7 @@ func main() {
 }
 
 func Day6() {
-	fmt.Println("============== Day5 ==============")
+	fmt.Println("============== Day6 ==============")
 	fmt.Println("============== TEST ==============")
 	testDeclarationForm := filereader.ReadFile("./input/day-6/test.txt")
 	count := countYesAnswers(testDeclarationForm)
