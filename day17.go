@@ -41,7 +41,7 @@ func (cube Cube) getNeighbours(currentSpace map[Vector3d]Cube) []Vector3d {
 }
 
 func Day17() {
-	fmt.Println("==============  Day16 =============")
+	fmt.Println("==============  Day17 =============")
 	testInputMap := filereader.ReadFile("./input/day-17/test.txt")
 	fmt.Println("==============  TEST  =============")
 
