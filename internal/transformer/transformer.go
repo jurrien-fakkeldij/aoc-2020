@@ -13,3 +13,11 @@ func SliceAtoi(sa []string) ([]int, error) {
 	}
 	return si, nil
 }
+
+func SliceItoa(sa []int) []string {
+	si := make([]string, 0, len(sa))
+	for _, a := range sa {
+		si = append(si, strconv.Itoa(a))
+	}
+	return si
+}
